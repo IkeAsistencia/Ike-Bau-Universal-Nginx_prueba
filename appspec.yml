@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-2:186005301796:task-definition/front-bau-univelrsal:1"
+        LoadBalancerInfo:
+          ContainerName: "ike_bau_universal_nginx"
+          ContainerPort: 8080
